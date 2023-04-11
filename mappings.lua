@@ -11,7 +11,10 @@ return {
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
+        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr)
+          require("astronvim.utils.buffer").close(
+            bufnr)
+        end)
       end,
       desc = "Pick to close",
     },
@@ -19,7 +22,28 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<D-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
+    -- Remap horizontal split
+    ["\\"] = false,
+    ["_"] = { "<Cmd>split<CR>", name = "Horizontal Split" },
+    ["<D-v>"] = { '"*p' },
+    ["<D-c>"] = { '"*y' },
+    ["<D-x>"] = { '"*x' },
+    ["<C-a>"] = { "ggVG" },
+  },
+  v = {
+    ["<D-v>"] = { '"*p' },
+    ["<D-c>"] = { '"*y' },
+    ["<D-x>"] = { '"*x' },
+    ["<D-s>"] = { "<C-C>:w<CR>" },
+  },
+  i = {
+    ["<D-v>"] = { "<C-R>*" },
+    ["<D-s>"] = { "<C-O>:w<CR>" },
+  },
+  c = {
+    ["<D-v>"] = { "<C-R>*" },
+
   },
   t = {
     -- setting a mapping to false will disable it
