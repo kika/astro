@@ -89,5 +89,8 @@ return {
     end
     -- Restore last position in file
     vim.cmd [[autocmd BufReadPost * if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit' | exe "normal! g`\"" | endif]]
+    -- reread file after a change on disk
+    vim.cmd [[autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif]]
+    vim.cmd [[autocmd FileChangedShellPost * lua vim.notify("File changed on disk. Buffer reloaded.")]]
   end,
 }
