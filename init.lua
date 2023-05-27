@@ -92,5 +92,14 @@ return {
     -- reread file after a change on disk
     vim.cmd [[autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif]]
     vim.cmd [[autocmd FileChangedShellPost * lua vim.notify("File changed on disk. Buffer reloaded.")]]
+    -- save the files when the focus is lost
+    vim.cmd [[autocmd FocusLost * silent! wa]]
+    -- Disable LSP semantic tokens, it's a giant fucking colorscheme mess
+    vim.api.nvim_create_autocmd("LspAttach", {
+      callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        client.server_capabilities.semanticTokensProvider = nil
+      end,
+    })
   end,
 }
