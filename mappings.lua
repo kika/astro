@@ -30,6 +30,8 @@ return {
     ["<D-c>"] = { '"*y' },
     ["<D-x>"] = { '"*x' },
     ["<C-a>"] = { "ggVG" },
+    -- LSP
+    ["<leader>l."] = { '<cmd>lua vim.lsp.buf.definition()<CR>' },
   },
   v = {
     ["<D-v>"] = { '"*p' },
