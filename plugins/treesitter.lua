@@ -1,6 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   opts = {
-    ensure_installed = { "lua", "rust", "python", "typescript" },
+    ensure_installed = { "lua", "rust", "python", "typescript", "tsx" },
   },
 }
