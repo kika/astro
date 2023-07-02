@@ -18,6 +18,12 @@ return {
       end,
       desc = "Pick to close",
     },
+    ["<D-w>"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close buffer" },
+    ["<D-]>"] = { function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end, desc =
+    "Next buffer" },
+    ["<D-[>"] = { function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end, desc =
+    "Prev buffer" },
+    ["<C-Tab>"] = { function() require("astronvim.utils.buffer").prev() end, desc = "Previous buffer" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
