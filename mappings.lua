@@ -37,7 +37,14 @@ return {
     ["<D-x>"] = { '"*x' },
     ["<C-a>"] = { "ggVG" },
     -- LSP
-    ["<leader>l."] = { '<cmd>lua vim.lsp.buf.definition()<CR>' },
+    ["<F12>"] = {
+      function() vim.lsp.buf.definition() end,
+      desc = "Show definition under cursor"
+    },
+    ["<F8>"] = {
+      function() vim.diagnostic.goto_next() end,
+      desc = "Next diagnostic",
+    },
   },
   v = {
     ["<D-v>"] = { '"*p' },
