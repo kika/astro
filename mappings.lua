@@ -41,9 +41,17 @@ return {
       function() vim.lsp.buf.definition() end,
       desc = "Show definition under cursor"
     },
+    ["<S-F12>"] = {
+      function() require("telescope.builtin").lsp_references() end,
+      desc = "Show references to symbol under cursor"
+    },
     ["<F8>"] = {
       function() vim.diagnostic.goto_next() end,
       desc = "Next diagnostic",
+    },
+    ["<D-.>"] = {
+      function() vim.lsp.buf.code_action() end,
+      desc = "LSP code action",
     },
   },
   v = {
