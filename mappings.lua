@@ -28,7 +28,7 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
-    ["<D-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
+    ["<D-s>"] = { ":w!<cr>", desc = "Save File" },
     -- Remap horizontal split
     ["\\"] = false,
     ["_"] = { "<Cmd>split<CR>", name = "Horizontal Split" },
