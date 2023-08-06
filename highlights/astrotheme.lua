@@ -15,6 +15,7 @@ return {
   ['@property'] = { fg = "#d4d4d4" },
   ['@type'] = { fg = "#90ef3a" },
   ['@tag'] = { fg = "#90ef3a" },
+  ['@constructor.tsx'] = { fg = "#90ef3a" },
   ['@namespace'] = { fg = "#4ec9b0" },
   ['typescriptVariableDeclaration'] = { link = '@variable' },
   ['typescriptAliasDeclaration'] = { link = '@type' },
