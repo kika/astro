@@ -36,6 +36,23 @@ return {
     ["<D-c>"] = { '"*y' },
     ["<D-x>"] = { '"*x' },
     ["<C-a>"] = { "ggVG" },
+    -- Crates
+    ['<leader>R'] = { name = "Crates" },
+    ['<leader>Rt'] = { function() require('crates').toggle() end, desc = "Toggle crates" },
+    ['<leader>Rr'] = { function() require('crates').reload() end, desc = "Reload crates" },
+    ['<leader>Rv'] = { function() require('crates').show_versions_popup() end, desc = "Show versions" },
+    ['<leader>Rf'] = { function() require('crates').show_features_popup() end, desc = "Show features" },
+    ['<leader>Rd'] = { function() require('crates').show_dependencies_popup() end, desc = "Show deps" },
+    ['<leader>Ru'] = { function() require('crates').update_crate() end, desc = "Update crate" },
+    ['<leader>Ra'] = { function() require('crates').update_all_crates() end, desc = "Update all crates" },
+    ['<leader>RU'] = { function() require('crates').upgrade_crate() end, desc = "Upgrade crate" },
+    ['<leader>RA'] = { function() require('crates').upgrade_all_crates() end, desc = "Upgrade all crates" },
+    ['<leader>Re'] = { function() require('crates').expand_plain_crate_to_inline_table() end, desc = "Expand crate to table" },
+    ['<leader>RE'] = { function() require('crates').extract_crate_into_table() end, desc = "Extract crate into table" },
+    ['<leader>RH'] = { function() require('crates').open_homepage() end, desc = "Open homepage" },
+    ['<leader>RR'] = { function() require('crates').open_repository() end, desc = "Open repo" },
+    ['<leader>RD'] = { function() require('crates').open_documentation() end, desc = "Open doc" },
+    ['<leader>RC'] = { function() require('crates').open_crates_io() end, desc = "Open crates.io" },
     -- LSP
     ["<F12>"] = {
       function() vim.lsp.buf.definition() end,
@@ -59,6 +76,8 @@ return {
     ["<D-c>"] = { '"*y' },
     ["<D-x>"] = { '"*x' },
     ["<D-s>"] = { "<C-C>:w<CR>" },
+    ['<leader>cU'] = { function() require('crates').upgrade_crates() end, desc = "Upgrade crates" },
+    ['<leader>cu'] = { function() require('crates').update_crates() end, desc = "Update crates" },
   },
   i = {
     ["<D-v>"] = { "<C-R>*" },
