@@ -101,5 +101,11 @@ return {
         client.server_capabilities.semanticTokensProvider = nil
       end,
     })
+    -- insert () after autocomplete function or method
+    local cmp_aupair = require('nvim-autopairs.completion.cmp')
+    require('cmp').event:on(
+      'confirm_done',
+      cmp_aupair.on_confirm_done()
+    )
   end,
 }
