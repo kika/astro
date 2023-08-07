@@ -26,6 +26,7 @@ return {
   ['typescriptImport'] = { link = '@include' },
   ['@type.rust'] = { link = '@type'},
   ['@namespace.rust'] = { link = '@namespace'},
+  ['@function.macro.rust'] = { fg = "#E4B8FB" },
   ['@property.toml'] = { link = 'Label'},
   ['@field'] = { link = 'Label'},
   ['NeoTreeGitUntracked'] = { fg = '#e5c06b'},
