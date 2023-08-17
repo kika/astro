@@ -35,7 +35,7 @@ return {
     ["<D-v>"] = { '"*p' },
     ["<D-c>"] = { '"*y' },
     ["<D-x>"] = { '"*x' },
-    ["<C-a>"] = { "ggVG" },
+    ["<D-a>"] = { "ggVG" },
     -- Crates
     ['<leader>R'] = { name = "Crates" },
     ['<leader>Rt'] = { function() require('crates').toggle() end, desc = "Toggle crates" },
@@ -83,6 +83,7 @@ return {
     ["<D-c>"] = { '"*y' },
     ["<D-x>"] = { '"*x' },
     ["<D-s>"] = { "<C-C>:w<CR>" },
+    ["<D-a>"] = { "<C-C>ggVG" },
     ['<leader>cU'] = { function() require('crates').upgrade_crates() end, desc = "Upgrade crates" },
     ['<leader>cu'] = { function() require('crates').update_crates() end, desc = "Update crates" },
   },
