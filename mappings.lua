@@ -70,6 +70,10 @@ return {
       function() vim.lsp.buf.code_action() end,
       desc = "LSP code action",
     },
+    ["<F2>"] = {
+      function() vim.lsp.buf.rename() end,
+      desc = "LSP rename",
+    },
     -- Trouble
     ["<leader>xx"] = { function() require("trouble").toggle() end},
     ["<leader>xw"] = { function() require("trouble").open("workspace_diagnostics") end},
