@@ -29,5 +29,15 @@ return {
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
     },
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({
+        panel = { auto_refresh = true }
+      })
+    end,
   }
 }
