@@ -36,8 +36,19 @@ return {
     event = "InsertEnter",
     config = function()
       require("copilot").setup({
-        panel = { auto_refresh = true }
+        panel = { enable = false },
+        suggestion = { enable = false },
       })
     end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function ()
+      require("copilot_cmp").setup({
+        event = { "InsertEnter", "LspAttach" },
+        fix_pairs = true,
+      })
+    end
   }
 }
