@@ -20,7 +20,6 @@ return {
   colorscheme = "astrodark",
   -- Icons overrides
   icons = {
-    BufferClose = "✗",
   },
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
