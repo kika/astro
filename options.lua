@@ -8,7 +8,7 @@ return {
     spell = false,          -- sets vim.opt.spell
     signcolumn = "auto",    -- sets vim.opt.signcolumn to auto
     wrap = false,           -- sets vim.opt.wrap
-    guifont = { "Fixedsys Excelsior", ":h16:#e-alias:#h-none" },
+    guifont = { "FixedsysExcelsior Nerd Font Mono", ":h16:#e-alias:#h-none" },
     colorcolumn = { 80 },
   },
   o = {
