@@ -79,6 +79,14 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+
+    -- after some upgrade the vim.g.rustaceanvim.server became boolean and
+    -- broke the plugin
+    vim.g.rustaceanvim = {
+      server = {}
+    }
+    --
+
     if vim.g.neovide then
       vim.g.neovide_underline_automatic_scaling = false
       vim.g.neovide_cursor_animation_length = 0

@@ -21,6 +21,16 @@ return {
   --     }
   --   end
   -- },
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --   opts = {
+  --     setup = {
+  --       rust_analyzer = function()
+  --         return true
+  --       end,
+  --     },
+  --   },
+  -- },
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
