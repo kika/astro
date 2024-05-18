@@ -9,18 +9,18 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  {
-    'nvim-treesitter/playground',
-    cmd = {
-      "TSPlaygroundToggle",
-      "TSHighlightCapturesUnderCursor",
-    },
-    config = function()
-      require('playground').setup {
-        enable = true,
-      }
-    end
-  },
+  -- {
+  --   'nvim-treesitter/playground',
+  --   cmd = {
+  --     "TSPlaygroundToggle",
+  --     "TSHighlightCapturesUnderCursor",
+  --   },
+  --   config = function()
+  --     require('playground').setup {
+  --       enable = true,
+  --     }
+  --   end
+  -- },
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
